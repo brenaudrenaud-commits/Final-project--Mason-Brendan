@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}All Users{% endblock %}
+{% block content %}
+  <h2>Other Users</h2>
+  {% if users %}
+    <ul>
+      {% for u in users %}
+        <li>{{ u.name }} ({{ u.age }}) – {{ u.username }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No other users yet.</p>
+<br>
+<head> <title>pick a car</title> </head>
+<body>
+    <select id="year" onchange="onSelectYear(this)"></select>
+    <select id="make" onchange="onSelectMake(this)"></select>
+    <select id="model" onchange="onSelectModel(this)"></select>
+    <p id="selection"></p>
+    <script src="{{ url_for('static', filename='hw13.js') }}"></script> </body>
+  {% endif %}
+{% endblock %}

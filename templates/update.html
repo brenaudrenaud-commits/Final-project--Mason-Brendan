@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Update Password{% endblock %}
+{% block content %}
+  <h2>Update Your Password</h2>
+  <form method="post">
+    <label>New Password: <input type="password" name="password" required></label><br>
+    <button type="submit">Update</button>
+  </form>
+{% endblock %}
